@@ -17,3 +17,26 @@ h1{font-size:2rem}h2{font-size:1.55rem}p{font-size:.98rem}
 @media(min-width:1200px){h1{font-size:3rem}h2{font-size:2rem}p{font-size:1.08rem}.carousel-image{height:31rem}}
 @media(max-width:575.98px){.hero{min-height:25rem}.btn-group{display:flex;flex-direction:column}.btn-group>.btn{border-radius:.375rem!important}.carousel-caption{display:block!important}.carousel-indicators{margin-bottom:4rem}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+body { transition: background-color .35s ease; }
+.site-tools { background: rgba(255, 249, 242, .72); }
+.site-clock time { font-size: .93rem; font-variant-numeric: tabular-nums; }
+.background-name { min-width: 4.3rem; }
+.faq-list { border: 1px solid #dbcdbf; border-radius: 1rem; overflow: hidden; background: #fff9f2; }
+.faq-item + .faq-item { border-top: 1px solid #dbcdbf; }
+.faq-question { display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; padding: 1.25rem 1.5rem; border: 0; background: transparent; color: #342720; font: inherit; font-size: 1.15rem; text-align: left; }
+.faq-question:hover { background: #f4eade; }
+.faq-question:focus-visible { outline: 3px solid #76513e; outline-offset: -4px; }
+.faq-icon { flex: 0 0 auto; font-family: Arial, sans-serif; font-size: 1.5rem; transition: transform .3s ease; }
+.faq-question[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+.faq-answer { display: grid; grid-template-rows: 0fr; visibility: hidden; transition: grid-template-rows .3s ease, visibility .3s; }
+.faq-answer.is-open { grid-template-rows: 1fr; visibility: visible; }
+.faq-answer-inner { overflow: hidden; min-height: 0; }
+.faq-answer p { margin: 0; padding: 0 1.5rem 1.25rem; }
+.subscription-dialog { width: min(32rem, calc(100% - 2rem)); max-height: calc(100dvh - 2rem); padding: 2rem; border: 1px solid #dbcdbf; border-radius: 1rem; background: #fff9f2; color: #342720; box-shadow: 0 1.5rem 5rem #34272040; }
+.subscription-dialog::backdrop { background: #241a15a6; }
+.popup-open { overflow: hidden; }
+.popup-close { flex: 0 0 auto; width: 2.5rem; height: 2.5rem; border: 1px solid #dbcdbf; border-radius: 50%; background: transparent; color: #342720; font-size: 1.6rem; line-height: 1; }
+.popup-close:hover { background: #f4eade; }
+.popup-close:focus-visible { outline: 3px solid #76513e; outline-offset: 2px; }
+@media (max-width: 575.98px) { .subscription-dialog { padding: 1.25rem; } .faq-question { padding: 1rem; } .faq-answer p { padding: 0 1rem 1rem; } }
